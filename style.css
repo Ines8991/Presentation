@@ -1,0 +1,21 @@
+/* Style général */
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #023430;
+}
+
+a {
+    color: #1f77b4;
+    text-decoration: none;
+}
+
+.stButton>button {
+    background-color: #023430;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+}
+
