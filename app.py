@@ -1,9 +1,11 @@
 import streamlit as st
 import base64
 
-
+# Configuration de la page
+# ------------------------------
+st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
 # 🎨 Thème clair / sombre
-theme = st.radio("🎨 Choisir un thème :", ["Clair", "Sombre"], horizontal=True)
+theme = st.radio("🎨 Choisir un thème :", ["Clair", "Sombre"], horizontal=True,index=0)
 
 # Appliquer le thème correspondant
 if theme == "Clair":
@@ -14,9 +16,7 @@ else:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ------------------------------
-# Configuration de la page
-# ------------------------------
-st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
+
 
 
 # ------------------------------
