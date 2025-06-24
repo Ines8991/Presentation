@@ -49,31 +49,26 @@ with open("data/CV_INES_COCOSSOU.pdf", "rb") as f:
 # ------------------------------
 # Section Contact
 # ------------------------------
+st.markdown("### 📬 Me contacter")
+
 st.markdown("""
-### 📢 Me contacter
-- **Email** : icocossou98@gmail.com  
-- **LinkedIn** : [linkedin.com/in/ines-cocossou](https://www.linkedin.com/in/ines-cocossou)  
-- **GitHub** : [github.com/Ines8991](https://github.com/Ines8991)
-""")
+<form action="https://formsubmit.co/icocossou1998@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Votre nom" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <input type="email" name="email" placeholder="Votre email" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <textarea name="message" placeholder="Votre message" required style="width: 100%; padding: 10px; height: 150px; margin-bottom: 10px;"></textarea>
+    <button type="submit" style="
+        background-color: #1E88E5;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;">
+        ✉️ Envoyer le message
+    </button>
+</form>
+""", unsafe_allow_html=True)
 
-
-with st.form(key="contact_form"):
-    name = st.text_input("Nom")
-    email = st.text_input("Email")
-    message = st.text_area("Message")
-
-    submit_button = st.form_submit_button("Envoyer")
-
-    if submit_button:
-        st.success("Merci ! Votre message a bien été envoyé.")
-
-        st.markdown(f"""
-        <form action="https://formsubmit.co/{icocossou98@gmail.com}" method="POST" hidden>
-            <input type="hidden" name="name" value="{name}">
-            <input type="hidden" name="email" value="{email}">
-            <input type="hidden" name="message" value="{message}">
-        </form>
-        """, unsafe_allow_html=True)
 
 
 # ----- FOOTER -----
