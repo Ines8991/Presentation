@@ -1,6 +1,18 @@
 import streamlit as st
 import base64
 
+
+# 🎨 Thème clair / sombre
+theme = st.radio("🎨 Choisir un thème :", ["Clair", "Sombre"], horizontal=True)
+
+# Appliquer le thème correspondant
+if theme == "Clair":
+    with open("light.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+else:
+    with open("dark.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 # ------------------------------
 # Configuration de la page
 # ------------------------------

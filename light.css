@@ -1,0 +1,15 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1E88E5;
+}
+
+.stButton > button {
+    background-color: #1E88E5;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
