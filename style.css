@@ -1,21 +1,34 @@
-/* Style général */
+/* 🌙 Mode sombre par défaut */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
-h1, h2, h3 {
-    color: #023430;
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+/* 📄 Boutons et champs de formulaire */
+button, .stButton>button {
+    background-color: #1E88E5;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+input, textarea {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
 }
 
 a {
-    color: #1f77b4;
-    text-decoration: none;
+    color: #90caf9;
 }
 
-.stButton>button {
-    background-color: #023430;
-    color: white;
-    border-radius: 8px;
-    padding: 0.5em 1em;
-}
+/* 🌓 Mode clair (en option, à activer avec un switch JS si nécessaire) */
+/* body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+} */
 
