@@ -5,17 +5,8 @@ import base64
 # ------------------------------
 st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
 # 🎨 Thème clair / sombre
-theme = st.radio("🎨 Choisir un thème :", ["Clair", "Sombre"], horizontal=True,index=0)
-
-# Appliquer le thème correspondant
-if theme == "Clair":
-    with open("light.css") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-else:
-    with open("dark.css") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-# ------------------------------
+with open("dark.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 
