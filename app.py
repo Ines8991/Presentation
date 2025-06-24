@@ -1,69 +1,81 @@
 import streamlit as st
-from PIL import Image
+import base64
 
+# ------------------------------
 # Configuration de la page
-st.set_page_config(page_title="Ines COCOSSOU - Profil", layout="wide")
+# ------------------------------
+st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
+
+# ----- CSS MODE SOMBRE/CLAIR -----
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# ------------------------------
+# En-tête
+# ------------------------------
 st.title("👩‍💻 Ines COCOSSOU")
-st.subheader("Data Analyst - Finance, Assurance et Santé")
+st.subheader("Analyste de Données | Passionnée par la Data & le Développement Web")
 
-# --- Informations de contact
-col1, col2 = st.columns(2)
-with col1:
-    st.write("📧 Email : icocossou1998@gmail.com")
-    st.write("📞 Téléphone : +33 07 78 13 68 93")
-with col2:
-    st.write("📍 Localisation : France")
-    st.write("🌐 GitHub : [Ines8991](https://github.com/Ines8991)")
-
-st.markdown("---")
-
-# --- Expériences professionnelles
-st.header("💼 Expériences professionnelles")
+# ------------------------------
+# Section À propos
+# ------------------------------
 st.markdown("""
-**🔹 Analyste de données (stagiaire)**  
-Université d’Évry – Direction de la Donnée, de l’Analyse et du Conseil (06/2023 – 10/2023)  
-- Analyse multivariée sur les cas de redoublement non autorisé (RNA)  
-- Clustering, prédiction avec modèles supervisés  
-- Déploiement d'une app de visualisation et recommandation
-
-**🔹 Analyste en modélisation mathématique (stagiaire)**  
-Laboratoire de Mathématiques et de Modélisation d’Évry (05/2022 – 08/2022)  
-- Étude des impulsions dans les réseaux neuronaux  
-- Simulations et modélisation en Python
+### ✨ À propos de moi
+Je suis actuellement diplomée en Data Sciences option Assurance et Finance, avec un fort intérêt pour les projets mêlant **intelligence artificielle**, **modélisation prédictive** et **développement d'applications web**.
 """)
 
-st.markdown("---")
-
-# --- Projets
-st.header("📊 Projets personnels")
+# ------------------------------
+# Section Projets
+# ------------------------------
 st.markdown("""
-**📈 Prévision boursière avec ARIMA + LSTM**  
-- Modèles de séries temporelles sur des données Yahoo Finance  
-- Modélisation, prédiction et visualisation interactive  
-- Interface Streamlit déployée
+### 📊 Projets réalisés
 
-👉 [Voir sur GitHub](https://github.com/Ines8991/Prevision_Arima_Lstm)
+- **Prédiction des prix boursiers avec ARIMA + LSTM** : Application Streamlit interactive avec visualisation Plotly et signaux de trading MACD.
+- **Analyse exploratoire des loyers à Paris** : Étude des données avec nettoyage, visualisation et insights sur la dynamique locative.
+- **Survie hospitalière** : Modélisation statistique de la survie des patients via courbes de Kaplan-Meier et analyse multivariée.
 """)
 
-st.markdown("---")
+# ------------------------------
+# Section Télécharger le CV
+# ------------------------------
+with open("data/CV_INES_COCOSSOU.pdf", "rb") as f:
+    st.download_button(
+        label="📄 Télécharger mon CV",
+        data=f,
+        file_name="Ines_COCOSSOU_CV.pdf",
+        mime="application/pdf"
+    )
 
-# --- Compétences
-st.header("🧰 Compétences techniques")
+
+# ------------------------------
+# Section Contact
+# ------------------------------
 st.markdown("""
-- **Python** : pandas, scikit-learn, TensorFlow, Keras, PyTorch  
-- **R**, **Power BI**, **Excel**, **Tableau**  
-- **SQL**, NoSQL, **Git**  
-- **Web** : Django, Laravel, HTML/CSS
+### 📢 Me contacter
+- **Email** : icocossou98@gmail.com  
+- **LinkedIn** : [linkedin.com/in/ines-cocossou](https://www.linkedin.com/in/ines-cocossou)  
+- **GitHub** : [github.com/Ines8991](https://github.com/Ines8991)
 """)
 
-# --- Langues et qualités
-st.header("🌐 Langues & qualités")
-st.markdown("""
-- 🇫🇷 Français : langue maternelle  
-- 🇬🇧 Anglais : niveau intermédiaire  
-- 💡 Autonomie, curiosité, rigueur, esprit d'analyse
-""")
 
-# --- Footer
+with st.form(key="contact_form"):
+    name = st.text_input("Nom")
+    email = st.text_input("Email")
+    message = st.text_area("Message")
+
+    submit_button = st.form_submit_button("Envoyer")
+
+    if submit_button:
+        st.success("Merci ! Votre message a bien été envoyé.")
+
+        st.markdown(f"""
+        <form action="https://formsubmit.co/{icocossou98@gmail.com}" method="POST" hidden>
+            <input type="hidden" name="name" value="{name}">
+            <input type="hidden" name="email" value="{email}">
+            <input type="hidden" name="message" value="{message}">
+        </form>
+        """, unsafe_allow_html=True)
+
+
+# ----- FOOTER -----
 st.markdown("---")
-st.markdown("© 2025 Ines COCOSSOU | CV interactif Streamlit")
+st.markdown("© 2025 Ines COCOSSOU | Par Streamlit")
