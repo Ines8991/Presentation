@@ -5,7 +5,7 @@ import base64
 # ------------------------------
 st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
 # 🎨 Thème clair / sombre
-with open("dark.css") as f:
+with open("light.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
