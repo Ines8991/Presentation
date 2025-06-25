@@ -6,15 +6,16 @@ body {
 h1, h2, h4, h5, h6 {
     color: #1E88E5;
 }
+
 h3 {
     font-size: 1.6rem;
-    border-left: 6px solid #1E88E5;
-    padding-left: 12px;
-    color: #1E88E5;
-    font-weight: bold;
+    background-color: #1E88E5; /* bleu doux */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
     margin-bottom: 1rem;
 }
-
 
 
 .stButton > button {
