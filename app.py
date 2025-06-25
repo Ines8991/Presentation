@@ -21,10 +21,7 @@ st.subheader("Analyste de Données | Passionnée par la Data & le Développement
 # ------------------------------
 st.markdown("""
 ### ✨ À propos de moi
-Je suis diplômée en Master Data Sciences de l’Université Paris-Saclay, spécialité Finance, Assurance et Santé. 
-Je possède de solides compétences en modélisation statistique, machine learning, deep learning, et en développement web. 
-Je suis passionnée par la data, la visualisation et la conception d’outils d’aide à la décision interactifs.
-
+Je suis diplômée en Data Sciences, spécialité Assurance & Finance. Je suis passionnée par les projets mêlant **intelligence artificielle**, **modélisation prédictive**, et **développement web**.
 """)
 
 # ------------------------------
@@ -32,15 +29,6 @@ Je suis passionnée par la data, la visualisation et la conception d’outils d�
 # ------------------------------
 st.markdown("""
 ### 📊 Projets réalisés
-
-- **📊 Prévision des cours boursiers avec ARIMA et LSTM**  
-  Collecte de données, entraînement de modèles, visualisation interactive et comparaison de performances.
-
-- **🔎 Analyse de survie des étudiants en situation de Redoublement Non Autorisé (RNA)**  
-  Modélisation prédictive, clustering et création d’une plateforme web pour l’Université d’Évry.
-
-- **🧠 Modélisation mathématique des réseaux de neurones biologiques**  
-  Application de processus stochastiques pour simuler l’activité neuronale (Laboratoire de Mathématique et Modélisation d’Évry).
 
 - **📈 Prédiction des prix boursiers (ARIMA + LSTM)**  
   Application Streamlit avec visualisation Plotly + signaux MACD
@@ -66,17 +54,6 @@ with open("data/CV_INES_COCOSSOU.pdf", "rb") as f:
 # Section Contact
 # ------------------------------
 st.markdown("""
-### 📜 Diplômes & certifications
-
-- 🎓 Master Data Sciences – Université Paris-Saclay (2020–2023)  
-  Spécialité Finance, Assurance et Santé
-
-- 🎓 Master Mathématiques Fondamentales – IMSP Bénin (2019–2020)
-
-- 🎓 Licence – Classes préparatoires scientifiques – IMSP Bénin (2016–2019)
-
-- ✅ Certification Power BI – Microsoft
-
 ### 📢 Me contacter
 - 📧 Email : icocossou1998@gmail.com  
 - 💼 LinkedIn : [linkedin.com/in/ines-cocossou](https://www.linkedin.com/in/ines-cocossou)  
