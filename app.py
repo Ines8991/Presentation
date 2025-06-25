@@ -2,13 +2,11 @@ import streamlit as st
 import base64
 
 # Configuration de la page
-# ------------------------------
 st.set_page_config(page_title="Ines COCOSSOU – Portfolio", layout="wide")
-# 🎨 Thème clair / sombre
+
+# 🌞 Application du thème clair (fixe ici)
 with open("light.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
 
 # ------------------------------
 # En-tête
@@ -25,15 +23,46 @@ Je suis diplômée en Data Sciences, spécialité Assurance & Finance. Je suis p
 """)
 
 # ------------------------------
+# Section Compétences techniques
+# ------------------------------
+st.markdown("""
+### 🛠️ Compétences techniques
+
+- **Analyse de données** : Python (pandas, scikit-learn, tensorflow, keras), R, Excel (VBA), PowerBI
+- **Modélisation** : Régression, classification, séries temporelles (ARIMA, LSTM), clustering
+- **Développement Web** : Django, Laravel, HTML, CSS, JavaScript
+- **Bases de données** : SQL, NoSQL
+- **Outils** : Git, Jupyter, Google Colab, VS Code
+""")
+
+# ------------------------------
+# Section Expériences professionnelles
+# ------------------------------
+st.markdown("""
+### 💼 Expériences professionnelles
+
+#### 📌 Analyste de données – Université d’Évry (06/2023 – 10/2023)
+- Analyse statistique sur les parcours étudiants en situation de Redoublement Non Autorisé (RNA)
+- Clustering des étudiants pour identifier les profils à risque
+- Création d'une plateforme web pour visualisation des RNA
+
+#### 📌 Analyste en modélisation mathématique – LAMME (05/2022 – 08/2022)
+- Étude mathématique des impulsions électriques dans des réseaux neuronaux biologiques
+- Simulation et visualisation sous Python des dynamiques neuronales
+""")
+
+# ------------------------------
 # Section Projets
 # ------------------------------
 st.markdown("""
 ### 📊 Projets réalisés
 
 - **📈 Prédiction des prix boursiers (ARIMA + LSTM)**  
-  Application Streamlit avec visualisation Plotly + signaux MACD
+  Collecte de données financières, entraînement de modèles, visualisation interactive
+
 - **🏠 Analyse exploratoire des loyers à Paris**  
   Étude statistique sur la dynamique locative
+
 - **🩺 Analyse de survie hospitalière**  
   Courbes Kaplan-Meier & analyse multivariée
 """)
@@ -69,7 +98,6 @@ with st.form(key="contact_form"):
 
     if submit_button:
         st.success("✅ Merci ! Votre message a bien été pris en compte.")
-        # Cette ligne ci-dessous ne permet pas l’envoi automatique réel sans JS ou backend
         st.info("ℹ️ Pour l’envoi réel, pensez à activer le formulaire via FormSubmit.")
         st.markdown(f"""
             <form action="https://formsubmit.co/icocossou1998@gmail.com" method="POST" hidden>
