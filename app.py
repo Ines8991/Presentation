@@ -21,7 +21,10 @@ st.subheader("Analyste de Données | Passionnée par la Data & le Développement
 # ------------------------------
 st.markdown("""
 ### ✨ À propos de moi
-Je suis diplômée en Data Sciences, spécialité Assurance & Finance. Je suis passionnée par les projets mêlant **intelligence artificielle**, **modélisation prédictive**, et **développement web**.
+Je suis diplômée en Master Data Sciences de l’Université Paris-Saclay, spécialité Finance, Assurance et Santé. 
+Je possède de solides compétences en modélisation statistique, machine learning, deep learning, et en développement web. 
+Je suis passionnée par la data, la visualisation et la conception d’outils d’aide à la décision interactifs.
+
 """)
 
 # ------------------------------
@@ -29,6 +32,15 @@ Je suis diplômée en Data Sciences, spécialité Assurance & Finance. Je suis p
 # ------------------------------
 st.markdown("""
 ### 📊 Projets réalisés
+
+- **📊 Prévision des cours boursiers avec ARIMA et LSTM**  
+  Collecte de données, entraînement de modèles, visualisation interactive et comparaison de performances.
+
+- **🔎 Analyse de survie des étudiants en situation de Redoublement Non Autorisé (RNA)**  
+  Modélisation prédictive, clustering et création d’une plateforme web pour l’Université d’Évry.
+
+- **🧠 Modélisation mathématique des réseaux de neurones biologiques**  
+  Application de processus stochastiques pour simuler l’activité neuronale (Laboratoire de Mathématique et Modélisation d’Évry).
 
 - **📈 Prédiction des prix boursiers (ARIMA + LSTM)**  
   Application Streamlit avec visualisation Plotly + signaux MACD
@@ -38,37 +50,6 @@ st.markdown("""
   Courbes Kaplan-Meier & analyse multivariée
 """)
 
-
-st.markdown("""
-### 🛠️ Compétences
-- **Langages** : Python, SQL, JavaScript
-- **Data Science** : Pandas, Scikit-learn, Statsmodels
-- **Visualisation** : Plotly, Matplotlib, Seaborn
-- **Déploiement** : Streamlit, GitHub Pages
-- **Outils** : Power BI, Excel, Git
-""")
-
-st.markdown("""
-### 💼 Expériences professionnelles
-
-- **AG2R LA MONDIALE** – Alternante Data / IA (2023-2025)  
-  *Participation à la création de l’IA ALMIA, automatisation des recommandations produit pour les clients...*
-
-- **Projet étudiant** – Analyse des données hospitalières (2024)  
-  *Étude de la survie des patients hospitalisés via analyse statistique multivariée...*
-""")
-
-st.markdown("""
-### 🎓 Formations & Certifications
-
-- **Licence Pro – Data Science Assurance & Finance** – ESTAG, 2025
-- **Certification Power BI** – OpenClassrooms, 2024
-- **Introduction à l’IA avec Python** – IBM, 2023
-""")
-
-st.markdown("""
-> 💡 *« La donnée n’est pas le nouveau pétrole, c’est le levier de demain. »*
-""")
 # ------------------------------
 # Section Télécharger le CV
 # ------------------------------
@@ -85,6 +66,17 @@ with open("data/CV_INES_COCOSSOU.pdf", "rb") as f:
 # Section Contact
 # ------------------------------
 st.markdown("""
+### 📜 Diplômes & certifications
+
+- 🎓 Master Data Sciences – Université Paris-Saclay (2020–2023)  
+  Spécialité Finance, Assurance et Santé
+
+- 🎓 Master Mathématiques Fondamentales – IMSP Bénin (2019–2020)
+
+- 🎓 Licence – Classes préparatoires scientifiques – IMSP Bénin (2016–2019)
+
+- ✅ Certification Power BI – Microsoft
+
 ### 📢 Me contacter
 - 📧 Email : icocossou1998@gmail.com  
 - 💼 LinkedIn : [linkedin.com/in/ines-cocossou](https://www.linkedin.com/in/ines-cocossou)  
@@ -110,8 +102,8 @@ with st.form(key="contact_form"):
             </form>
         """, unsafe_allow_html=True)
 
-
+# ------------------------------
+# Footer
+# ------------------------------
 st.markdown("---")
-from datetime import date
-today = date.today().strftime("%d/%m/%Y")
-st.markdown(f"📅 Dernière mise à jour : {today}")
+st.markdown("© 2025 Ines COCOSSOU | Développé avec ❤️ via Streamlit")
