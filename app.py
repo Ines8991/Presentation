@@ -38,6 +38,37 @@ st.markdown("""
   Courbes Kaplan-Meier & analyse multivariée
 """)
 
+
+st.markdown("""
+### 🛠️ Compétences
+- **Langages** : Python, SQL, JavaScript
+- **Data Science** : Pandas, Scikit-learn, Statsmodels
+- **Visualisation** : Plotly, Matplotlib, Seaborn
+- **Déploiement** : Streamlit, GitHub Pages
+- **Outils** : Power BI, Excel, Git
+""")
+
+st.markdown("""
+### 💼 Expériences professionnelles
+
+- **AG2R LA MONDIALE** – Alternante Data / IA (2023-2025)  
+  *Participation à la création de l’IA ALMIA, automatisation des recommandations produit pour les clients...*
+
+- **Projet étudiant** – Analyse des données hospitalières (2024)  
+  *Étude de la survie des patients hospitalisés via analyse statistique multivariée...*
+""")
+
+st.markdown("""
+### 🎓 Formations & Certifications
+
+- **Licence Pro – Data Science Assurance & Finance** – ESTAG, 2025
+- **Certification Power BI** – OpenClassrooms, 2024
+- **Introduction à l’IA avec Python** – IBM, 2023
+""")
+
+st.markdown("""
+> 💡 *« La donnée n’est pas le nouveau pétrole, c’est le levier de demain. »*
+""")
 # ------------------------------
 # Section Télécharger le CV
 # ------------------------------
@@ -79,8 +110,8 @@ with st.form(key="contact_form"):
             </form>
         """, unsafe_allow_html=True)
 
-# ------------------------------
-# Footer
-# ------------------------------
+
 st.markdown("---")
-st.markdown("© 2025 Ines COCOSSOU | Développé avec ❤️ via Streamlit")
+from datetime import date
+today = date.today().strftime("%d/%m/%Y")
+st.markdown(f"📅 Dernière mise à jour : {today}")
